@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(document).on("pagecreate", "#login", function(event) {
-
-    var header = '';
-    header += '<div data-role="header">';
-    header += '	<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">';
-    header += '	<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-delete ui-btn-b">Cerrar</a>';
-    header += '	</div>';
-    header += '	<h6>l</h6>';
-    header += '</div>';
+$(document).on("pagecreate", "#login", function() {
+    var $header = $(''
+            + '<div data-role="header">'
+            + '	<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">'
+            + '	<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-delete ui-btn-b">Cerrar</a>'
+            + '	</div>'
+            + '	<h6>l</h6>'
+            + '</div>');
 
     var $content = $('<form>'
             + '	<div>'
@@ -31,11 +30,11 @@ $(document).on("pagecreate", "#login", function(event) {
             + '	</div>'
             + '</form>');
 
-    var footer = '';
-    footer += '<h1>Alex &copy</h1>';
+    var $footer = $(''
+            + '<h1>Alex &copy</h1>');
 
-    $(header).appendTo('#header_login');
+    $header.appendTo('#header_login');
     $content.appendTo('#content_login');
-    $(footer).appendTo('#footer_login');
+    $footer.appendTo('#footer_login');
 });
 
