@@ -1,0 +1,8 @@
+.myScrollbar
+{
+  background-color: transparent;
+}
+.ui-icon-claneo:after {
+	background-image: url("../img/21-skull.png");
+	background-size: 18px 18px;
+}
