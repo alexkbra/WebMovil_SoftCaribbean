@@ -1,5 +1,14 @@
 function Session() {
     var listUser = new Array();
+    var userSession = null;
+    
+    this.getUserSession = function (){
+        return userSession;
+    };
+    
+    this.setUserSession = function (arg){
+        userSession = arg;
+    };
 
     this.getListUser = function() {
         return listUser;

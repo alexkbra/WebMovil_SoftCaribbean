@@ -1,40 +1,37 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-$(document).on("pagecreate", "#login", function() {
-    var $header = $(''
-            + '<div data-role="header">'
-            + '	<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">'
-            + '	<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-delete ui-btn-b">Cerrar</a>'
-            + '	</div>'
-            + '	<h6>l</h6>'
-            + '</div>');
 
-    var $content = $('<form>'
-            + '	<div>'
-            + '		<label for="correo">Correo:</label>'
-            + '		<input type="email" data-clear-btn="true" name="correo" id="correo" value="" />'
-            + '		<label for="clave">Clave:</label>'
-            + '		<input type="password" data-clear-btn="true" name="clave" id="clave" value="" autocomplete="off" />'
-            + '	</div>'
-            + '	<div>'
-            + '		<a href="#menu" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check">Ingresar</a>'
-            + '		<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-claneo ui-btn-b ui-mini">Cancelar</a>'
-            + '		<label for="recordar">Recordar me:</label>'
-            + '		<select name="recordar" id="recordar" data-role="slider">'
-            + '			<option value="no">No</option>'
-            + '			<option value="si">Si</option>'
-            + '		</select>'
-            + '	</div>'
-            + '</form>');
+$(document).on("pagecreate", "#login", function(event) {
+    var header = '<div data-role="header">';
+    header += '	<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">';
+    header += '	<a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="claneo" data-theme="b">Cerrrar</a>';
+    header += '	</div>';
+    header += '	<h6>l</h6>';
+    header += '</div>';
 
-    var $footer = $(''
-            + '<h1>Alex &copy</h1>');
+    $("#header_login").html(header);
 
-    $header.appendTo('#header_login');
-    $content.appendTo('#content_login');
-    $footer.appendTo('#footer_login');
+    var content = '<form>';
+    content += '	<div>';
+    content += '		<label for="correo">Correo:</label>';
+    content += '		<input type="email" data-clear-btn="true" name="correo" id="correo" value="" />';
+    content += '		<label for="clave">Clave:</label>';
+    content += '		<input type="password" data-clear-btn="true" name="clave" id="clave" value="" autocomplete="off" />';
+    content += '	</div>';
+    content += '	<div>';
+    content += '		<a href="#" data-role="button" data-mini="true" data-inline="true" data-theme="a" onclick="eventButtonLogin()">Ingresar</a>';
+    content += '		<a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="claneo" data-theme="b">Cancelar</a>';
+    content += '		<label for="recordar">Recordar me:</label>';
+    content += '		<select name="recordar" id="recordar" data-role="slider">';
+    content += '			<option value="no">No</option>';
+    content += '			<option value="si">Si</option>';
+    content += '		</select>';
+    content += '	</div>';
+    content += '</form>';
+    
+    $("#content_login").html(content);
+    
+    var footer = '<h1>Alex &copy</h1>';
+    
+    $("#footer_login").html(footer);
+
 });
 
